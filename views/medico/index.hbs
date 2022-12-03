@@ -1,0 +1,55 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+<h1>{{title}}</h1>
+
+<h1 class="text-center"> Medicos</h1>
+    <p >
+        <div class="align-middle">
+            <nav class="navbar navbar-dark bg-primary">
+            <div class="container-fluid">
+            <h3><a href="/medicos/create" class="text-light">Agregar medicos</a></h3>
+            </div>
+            </nav>
+            <h2>Lista de medicos</h1>
+            {{#if medicos }}
+                <table class="table table-bordered" >
+                    <thead class="table-success table-striped" >
+                        <tr class="table-dark">
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Genero</th>
+                            <th>DNI</th>
+                            <th>Especialidad</th>
+                            <th>Fecha de Nacimiento</th>
+                            <th>Direccion</th>
+                            <th>Email</th>
+                            <th>Estado</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{# each medicos }}
+                        <tr>
+                            <td>{{ nombre }}</a></td>
+                            <td>{{ apellidos }}</td>
+                            <td>{{ genero }}</td>
+                            <td>{{ dni }}</td>
+                            <td>{{ especialidad }}</td>
+                            <td>{{ fecha_nacimiento }}</td>
+                            <td>{{ direccion }}</td>
+                            <td>{{ email}}</td>
+                            <td>{{ estado }}</td>
+                            <td><a href="/medicos/show/{{ _id }}" type="submit" type="button" class="btn btn-primary">Editar</a></td>
+                            <td><form action="/medicos/delete/{{_id }}" method="post">
+                            <button type="submit" type="button" class="btn btn-secondary">Eliminar</button>
+                            </form></td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            {{~^~}}
+                <div>medicos no encontrados.</div>
+            {{/if}}
+        </div>
+    </p>

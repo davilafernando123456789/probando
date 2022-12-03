@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+        <title>Detalles del medico</title>
+    </head>
+    <body class="container">
+        <div class="align-middle">
+            <nav class="navbar navbar-dark bg-primary">
+            <div class="container-fluid">
+            <h3><a href="/medicos" class="text-light">Lista de medicos</a></h3>
+            </div>
+            </nav>
+            <h1 class="text-center">Detalles de medicos</h1>
+            <table class="table table-bordered">
+                <tbody class="table-success table-striped">
+                    <tr>
+                        <td>Nombres:</td>
+                        <td>{{ medico.nombres }}</td>
+                    </tr>
+                    <tr>
+                        <td>Apellidos:</td>
+                        <td>{{ medico.apellidos }}</td>
+                    </tr>
+                    <tr>
+                        <td>Genero:</td>
+                        <td>{{ medico.genero }}</td>
+                    </tr>
+                    <tr>
+                        <td>DNI:</td>
+                        <td>{{ medico.dni }}</td>
+                    </tr>
+                    <tr>
+                        <td>Especialidad:</td>
+                        <td>{{ medico.especialidad }}</td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de Nacimiento:</td>
+                        <td>{{ medico.fecha_nacimiento }}</td>
+                    </tr>
+                    <tr>
+                        <td>Direccion:</td>
+                        <td>{{ medico.direccion }}</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>{{ medico.email }}</td>
+                    </tr>
+                    <tr>
+                        <td>Estado:</td>
+                        <td>{{ medico.estado }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3><a type="button" class="btn btn-primary" href="/medicos/edit/{{ medico._id }}">Editar</a></h3>
+            <form action="/medicos/delete/{{ medico._id }}" method="post">
+                <button type="submit" type="button" class="btn btn-secondary">Eliminar</button>
+            </form>
+        </div>
+    </body>
+</html>

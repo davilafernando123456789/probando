@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <title>Agregar Medico</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-dark bg-primary">
+            <div class="container-fluid">
+            <h3><a href="/medicos" class="text-light">Lista de medicos</a></h3>
+            </div>
+            </nav>
+            <div class="align-middle">
+            <h1 >Datos del nuevo medico</h1>
+            <form class="align-middle" action="/medicos/save" method="post">
+                <table class="TablaPrincipal">
+                    <tbody class="align-middle">
+                        <tr>
+                            <td>Nombres:</td>
+                            <td><input type="text" class="form-control mb-3" name="nombre" /></td>
+                        </tr>
+                        <tr>
+                            <td>Apellidos:</td>
+                            <td><input type="text" class="form-control mb-3" name="apellidos" /></td>
+                        </tr>
+                        <tr>
+                            <td>Genero:</td>
+                            <td><input type="text" class="form-control mb-3" name="genero" /></td>
+                        </tr>
+                        <tr>
+                            <td>DNI:</td>
+                            <td><input type="text" class="form-control mb-3" name="dni" /></td>
+                        </tr>
+                        <tr>
+                            <td>Especialidad:</td>
+                            <td><input type="text" class="form-control mb-3" name="especialidad" /></td>
+                        </tr>
+                        <tr>
+                            <td>Fecha de nacimiento:</td>
+                            <td><input type="text" class="form-control mb-3" name="fecha_nacimiento" /></td>
+                        </tr>
+                        <tr>
+                            <td>Direccion:</td>
+                            <td><input type="text" class="form-control mb-3" name="direccion" /></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="text" class="form-control mb-3" name="email" /></td>
+                        </tr>
+                        <tr>
+                            <td>Estado:</td>
+                            <td><input type="text" class="form-control mb-3" name="estado" /></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" class="btn btn-primary" value="Guardar">
+                            <input type="button" class="btn btn-secondary" value="Cancelar" onClick="history.go(-1);"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>
